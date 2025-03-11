@@ -4,7 +4,7 @@ const librarySchema = new Schema(
   {
     title: { type: String, required: true },
     author: { type: String, required: true },
-    publishedyear: { type: Date, required: true },
+    publishedYear: { type: Number, required: true },
   },
   {
     timestamps: true,
