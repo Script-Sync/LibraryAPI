@@ -4,7 +4,9 @@ const booksRouter = Router();
 
 booksRouter.post('/books', addBook);
 booksRouter.get('/books', getAllBooks);
-booksRouter.patch('/books:id', updateBook);
+booksRouter.get('/books/:id', getBookById);
+booksRouter.put('/books/:id', updateBook);
+//booksRouter.patch('/books:id', updateBook);
 booksRouter.delete('/books:id', deleteBook);
 
 
