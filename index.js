@@ -12,7 +12,10 @@ await mongoose.connect(process.env.MONGO_URI).then(()=>{
 });
 
 //Use Global middleware
-app.use(express.json());
+app.use(express.json()); 
+
+//Use Routes
+app.use('/', booksRouter);
 
 //Server is listening
 app.listen(4000, ()=>{
