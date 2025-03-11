@@ -9,7 +9,10 @@ await mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log("Connected to MongoDB");
 }).catch((err)=>{
     console.log(err)
-})
+});
+
+//Use Global middleware
+app.use(express.json());
 
 //Server is listening
 app.listen(4000, ()=>{
