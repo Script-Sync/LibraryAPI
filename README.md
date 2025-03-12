@@ -9,5 +9,3 @@ operations for books, with input validators and error handling methods.<br>
 3.Update book details <br>
 4.Input Validation and error handling <br>
 
-HIDDEN: MONGO_URI = 'mongodb+srv://Library-API:Apjgvwn9WOS7gbNk@cluster0.0mk8h.mongodb.net/Library-API?retryWrites=true&w=majority&appName=Cluster0'
-
