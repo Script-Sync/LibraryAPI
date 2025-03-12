@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import booksRouter from "./routes/LibRoute.js";
+import cors from "cors";
 
 //create an express app
 const app = express();
@@ -13,6 +14,7 @@ await mongoose.connect(process.env.MONGO_URI).then(()=>{
 });
 
 //Use Global middleware
+app.use(cors());
 app.use(express.json()); 
 
 //Use Routes
