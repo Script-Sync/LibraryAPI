@@ -1,12 +1,14 @@
-import { LibraryModel } from '../models/LibModel.js';
+import { LibraryModel } from "../models/LibModel.js";
 import { addBookDetails } from "../validators/LibValidator.js";
 
 // Add a new book
 export const addBook = async (req, res, next) => {
   try {
-    const { title, author, publishedYear } = req.body;
-    const createbook = new LibraryModel({ title, author, publishedYear });
-    await createbook.save();
+    const { error, value } = addBookDetails.validate(req.body);
+    if (error) {
+      return res.status(422).json(error);
+    }
+    await createBook.save();
     res.status(201).json({ message: "Book added" });
   } catch (error) {
     next(error);
