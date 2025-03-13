@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import normailze from "normalize-mongoose"
+import normalize from "normalize-mongoose"
 
 const librarySchema = new Schema(
   {
@@ -18,6 +18,6 @@ const librarySchema = new Schema(
   }
 );
 
-librarySchema.plugin(normailze);
+librarySchema.plugin(normalize);
 
 export const LibraryModel = model("Library", librarySchema);

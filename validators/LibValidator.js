@@ -5,7 +5,7 @@ export const addBookDetails = Joi.object({
     title: Joi.string().required(),
     author: Joi.string().required(),
     publishedYear: Joi.number().integer().required(), // Ensures no decimals
-    image: Joi.string().uri().required(), // Ensures a valid URL
+    image: Joi.string().required(), // Ensures a valid URL
     genres: Joi.string()
         .valid("Fiction", "Non-Fiction", "Mystery", "Romance", "Fantasy",
             "Horror", "Self-Help", "Biography/Memoir", "Poetry", "Thriller")
