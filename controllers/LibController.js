@@ -7,7 +7,7 @@ export const addBook = async (req, res, next) => {
     console.log(req.body);
     const { error, value } = addBookDetails.validate({
       ...req.body,
-      image: req.file.filename,
+      image: req.file?.filename,
     });
     if (error) {
       return res.status(422).json(error);
