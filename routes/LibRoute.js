@@ -2,8 +2,10 @@ import { Router } from "express";
 import { addBook, deleteBook, getAllBooks, getBookById, updateBook } from "../controllers/LibController.js";
 import { remoteUpload } from "../LibMiddlewares/upload.js";
 
+//Create booksRouter
 const booksRouter = Router();
 
+//Routes
 booksRouter.post('/books', remoteUpload.single("image"), addBook);
 booksRouter.get('/books', getAllBooks);
 booksRouter.get('/books/:id', getBookById);
